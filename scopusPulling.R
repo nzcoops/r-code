@@ -1,8 +1,8 @@
 library(rscopus)
 library(wordcloud)
 
-store <- author_search(au_id = "34970888100", api_key = "56f98103028c1133fb46225318b1ebf9")
-#store3 <- affiliation_retrieval(id = "60031806", api_key = "56f98103028c1133fb46225318b1ebf9", identifier = c("affiliation_id", "eid"))
+store <- author_search(au_id = "34970888100", api_key = "XX")
+#store3 <- affiliation_retrieval(id = "60031806", api_key = "XX", identifier = c("affiliation_id", "eid"))
 
 # [[1]]$affiliation[[2]]$affilname
 # [1] "Telethon Institute for Child Health Research"
