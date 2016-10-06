@@ -79,7 +79,7 @@ names(bplu) <- c("sbpm","sbpf","dbpm","dbpf")
         {
         mu <- bplu$dbpf[1] +
         sum(bplu$dbpf[2]*(age[i]-10),(bplu$dbpf[3]*(age[i]-10))^2,(bplu$dbpf[4]*(age[i]-10))^3,(bplu$dbpf[5]*(age[i]-10))^4) +
-        sum(bplu$dbpf[6]*z_ht[i],(bplu$dbpf[7]*z_ht[i])^2,(bplu$dbpf[8]*z_ht[i])^3,(bplu$dbpf[9]*z_ht[i])^4)
+        sum(bplu$dbpf[6]*z_ht[i],bplu$dbpf[7]*z_ht[i]^2,bplu$dbpf[8]*z_ht[i]^3,bplu$dbpf[9]*z_ht[i]^4)
         dbp_z[i] <- (dbp[i] - mu)/bplu$dbpf[10]
         }
       # Males
@@ -87,7 +87,7 @@ names(bplu) <- c("sbpm","sbpf","dbpm","dbpf")
         {
         mu <- bplu$dbpm[1] +
         sum(bplu$dbpm[2]*(age[i]-10),(bplu$dbpm[3]*(age[i]-10))^2,(bplu$dbpm[4]*(age[i]-10))^3,(bplu$dbpm[5]*(age[i]-10))^4) + 
-        sum(bplu$dbpm[6]*z_ht[i],(bplu$dbpm[7]*z_ht[i])^2,(bplu$dbpm[8]*z_ht[i])^3,(bplu$dbpm[9]*z_ht[i])^4)
+        sum(bplu$dbpm[6]*z_ht[i],bplu$dbpm[7]*z_ht[i]^2,bplu$dbpm[8]*z_ht[i]^3,bplu$dbpm[9]*z_ht[i]^4)
         dbp_z[i] <- (dbp[i] - mu)/bplu$dbpm[10]
         }
       }
