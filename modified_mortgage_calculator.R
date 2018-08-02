@@ -60,6 +60,3 @@ mortgage <- function(P=500000, I=6, L=30, amort=T) {
 #		P = principal (loan amount)
 #		I = annual interest rate
 #		L = length of the loan in years \n")
-
-
-
