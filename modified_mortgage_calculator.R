@@ -21,9 +21,10 @@ mortgage <- function(P=500000, I=6, L=30, amort=T) {
 	N <- 12 * L
 	M <- P*J/(1-(1+J)^(-N))
 	monthPay <<- M
-	cat("\nThe payments for this loan are:\n 
-			Monthly payment: $", M, " (stored in monthPay)\n
-			Total cost: $", M*N, "\n\n", sep="")
+	#cat("\nThe payments for this loan are:\n 
+	#		Monthly payment: $", M, " (stored in monthPay)\n
+	#		Total cost: $", M*N, "\n\n", sep="")
+	
 	# Calculate Amortization for each Month
 	if(amort==T) {
 		Pt <- P # current principal or amount of the loan
@@ -50,7 +51,7 @@ mortgage <- function(P=500000, I=6, L=30, amort=T) {
 					     Annual_Interest=tapply(aDFmonth$Monthly_Interest, aDFmonth$Year, sum), 
 					     Year=as.vector(na.omit(unique(aDFmonth$Year)))
 					     )
-  return(as.list(month, year))             
+  return(list("month" = month, "year" = year))             
 	#	aDFyear <- aDFyear
 	#	cat("The amortization data for each of the", N, "months are stored in \"aDFmonth\".\n\n")
 	#	cat("The amortization data for each of the", L, "years are stored in \"aDFyear\".\n\n")
