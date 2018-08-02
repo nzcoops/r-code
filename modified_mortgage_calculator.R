@@ -55,6 +55,7 @@ mortgage <- function(P=500000, I=6, L=30, amort=T) {
 	#	cat("The amortization data for each of the", N, "months are stored in \"aDFmonth\".\n\n")
 	#	cat("The amortization data for each of the", L, "years are stored in \"aDFyear\".\n\n")
 	}
+}
 #cat("The monthly mortgage payments and amortization rates can be calculted with the mortgage() function like this: \n 
 #	mortgage(P=500000, I=6, L=30, amort=T, plotData=T)
 #		P = principal (loan amount)
